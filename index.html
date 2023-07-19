@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Validation By Tarun Sharma</title>
+
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sen:wght@400;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="container">
+        <h1 class="title ">Feel Free To Register Yourself !</h1>
+      <form method="POST" name="google-sheet">
+        <!-- FULL NAME -->
+        <div class="form-group animatedField">
+          <label for="name">Name :</label>
+          <input
+            type="text"
+            name="Name"
+            id="name"
+            placeholder="ExamplePreet Singh/Kaur/etc."
+            required
+            maxlength="50"
+            pattern="[A-Za-z ]{3,50}"
+          />
+        </div>
+
+        <!-- EMAIL -->
+        <div class="form-group animatedField">
+          <label for="email">Email :</label>
+          <input
+            type="email"
+            name="Email"
+            id="email"
+            placeholder="example@address.domain"
+            required
+          />
+        </div>
+
+        <!-- PHONE NUMBER -->
+        <div class="form-group animatedField">
+          <label for="phone">Phone Number :</label>
+          <input type="tel" name="Phone" id="phone" placeholder="9999999999" 
+          maxlength="10"
+          pattern="[0-9]{10,}"
+          required />
+        </div>
+
+        <!-- WEBSITE URL -->
+        <div class="form-group animatedField">
+          <label for="url">Website URL :</label>
+          <input
+            type="url"
+            name="Website"
+            id="url"
+            placeholder="http://example.domain"
+            required
+          />
+        </div>
+
+        <!-- GENDER -->
+        <div class="form-group radio animatedField">
+          <div class="male">
+            <input type="radio" name="Gender" id="male" value="Male" required>
+            <label for="male">Male</label>
+          </div>
+          <div class="female">
+            <input type="radio" name="Gender" id="female" value="Female" required>
+            <label for="female">Female</label>
+          </div>
+        </div>
+
+        <!-- PASSWORD -->
+        <div class="form-group animatedField">
+          <label for="password1">Password :</label>
+          <input
+            type="password"
+            name="Password"
+            id="password1"
+            placeholder="Create Password"
+            required
+            pattern="(?=.*\W+)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}"
+            title="Password should contain atleast 1 lowercase, uppercase, number and special charactor and should be greator than 8 characters"
+          />
+        </div>
+
+        <!-- CONFIRM PASSWORD -->
+        <div class="form-group animatedField">
+          <label for="password2">Confirm Password :</label>
+          <input
+            type="password"
+            name=""
+            id="password2"
+            placeholder="Confirm Password"
+            required
+            pattern="(?=.*\W+)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}"
+            title="Password should contain atleast 1 lowercase, uppercase, number and special charactor and should be greator than 8 characters"
+          />
+        </div>
+
+        <!-- CHECKBOX -->
+        <div class="form-group checked animatedField">
+          <input type="checkbox" name="" id="check">
+          <label for="check">Please Agree to continue further</label>
+        </div>
+
+        <!-- SUBMIT BUTTON -->
+        <div class="form-group animatedField">
+          <input type="submit" value="Register" />
+        </div>
+      </form>
+
+      <div class="success animatedField">
+        <h3 class="success-title message">Don't Hesitate</h3>
+      </div>
+    </div>
+
+
+    <!-- GSAP CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js" integrity="sha512-cOH8ndwGgPo+K7pTvMrqYbmI8u8k6Sho3js0gOqVWTmQMlLIi6TbqGWRTpf1ga8ci9H3iPsvDLr4X7xwhC/+DQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- app.js -->
+    <script src="app.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form validation</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- title -->
+      <div class="title">
+        <h1>Feel Free to register yourself</h1>
+      </div>
+      <!-- form -->
+      <form>
+        <div class="form-group">
+          <label for="name">Name:</label>
+          <input
+            type="text"
+            name="Name"
+            id="name"
+            required
+            maxlength="50"
+            pattern="[A-Za-z ]{3, 50}"
+            placeholder="Enter your name"
+            title="Name should be atleast 3 - 50 digits and no numbers are allowed"
+          />
+        </div>
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input
+            type="email"
+            name="Email"
+            id="email"
+            required
+            placeholder="example@ex.com"
+          />
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone Number:</label>
+          <input
+            type="tel"
+            name="Phone"
+            id="phone"
+            required
+            maxlength="10"
+            pattern="[0-9]{10,}"
+            placeholder="9999999999"
+          />
+        </div>
+        <div class="form-group">
+          <label for="url">Website URL:</label>
+          <input
+            type="url"
+            name="Website"
+            id="url"
+            required
+            placeholder="http://example.domain"
+          />
+        </div>
+
+        <div class="form-group radio">
+          <div class="male">
+            <input type="radio" value="male" name="Gender" required id="male" />
+            <label for="male">Male</label>
+          </div>
+          <div class="female">
+            <input
+              type="radio"
+              value="female"
+              name="Gender"
+              required
+              id="female"
+            />
+            <label for="female">Female</label>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="password">Password:</label>
+          <input
+            type="password"
+            required
+            name="Password"
+            pattern="(?=.*\W+)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}"
+            id="password"
+            placeholder="Create your Password"
+            title="Pasword should contain special char, num, alpha, cap, lower"
+          />
+        </div>
+        <div class="form-group">
+          <label for="cpassword">Confirm Password:</label>
+          <input
+            type="password"
+            required
+            name=""
+            id="cpassword"
+            pattern="(?=.*\W+)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}"
+            placeholder="Confirm your Password"
+          />
+        </div>
+
+        <div class="form-group">
+          <button class="btn" type="submit">Register</button>
+        </div>
+      </form>
+      <!-- error -->
+      <div class="error-mesage">
+        <h3 class="message">Error</h3>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>

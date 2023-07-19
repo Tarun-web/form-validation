@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    width: 40vw;
+    margin: auto;
+    height: 100vh;
+    border: 1px solid green;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+input:valid{
+    border: 2px solid green;
+}
+input:invalid{
+    border: 2px solid red;
+    
+}
+input:focus{
+    outline: none   ;
+}
